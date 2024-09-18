@@ -13,23 +13,25 @@
         <nav>
             <div class="row">
                 <div class="nav__container">
+                <div class="logo__banner--container">
                     <figure class="logo__container">
                         <img class="movie__logo" src="movieLogo.jpg" />
                     </figure>
                     <figure class="img__container">
                         <img class="movie__banner" src="movie-banner.png" alt="" />
                     </figure>
-                    <ul class="nav__list">
-                        <li class="nav">Home</li>
-                        <li class="nav">Search Movies</li>
-                        <li class="nav"><button class="contact__btn">Contact</button></li>
-                    </ul>
-                    <button class="open__menu" onclick="openMenu()">
-                        <i class="fas fa-bars"></i>
-                    </button>
+                    </div>
+                        <ul class="nav__list">
+                            <li class="nav">Home</li>
+                            <li class="nav">Search Movies</li>
+                            <li class="nav"><button class="contact__btn">Contact</button></li>
+                        </ul>
+                        <button class="open__menu" onclick="openMenu()">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
                     <div class="menu__backdrop" style="visibility: hidden;">
                         <button class="menu__btn menu__btn--close" onclick="closeMenu()">
-                            <i class="fas fa-times"></i>
+                            <i class="fa-solid fa-xmark"></i>
                         </button>
                         <ul class="menu__links">
                             <li class="menu__list">
@@ -60,22 +62,22 @@
                                     <input class="search-bar" type="text" />
                                     <i class="fa-solid fa-magnifying-glass search-btn"></i>
                                 </div>
-                                <div class="movies movies__loading">
-                                    <i class="fas fa-spinner movies__loading--spinner"></i>
-                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-            </section>
-
-        </main>
+                    
+                </section>
+                
+            </main>
         </div>
     </div>
     <section id="movies__main">
         <div class="search__results">
             <div class="row">
-                <h2>Search Results:</h2>
+                <h2 class="search__results--title">Search Results:</h2>
+            </div>
+            <div class="movies movies__loading">
+                <i class="fas fa-spinner movies__loading--spinner"></i>
             </div>
         </div>
     </section>
