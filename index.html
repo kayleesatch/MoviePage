@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/009510bb19.js" crossorigin="anonymous"></script>
   </head>
 
-  <body>
+  <body id="home">
     <section id="landing">
         <nav>
             <div class="row">
@@ -17,17 +17,17 @@
                         <img class="logo" src="movieLogo.jpg" alt="">
                         <img class="banner" src="movie-banner.png" alt="" />
                         <ul class="nav__links">
-                            <li><a href="#" class="nav__link">Home</a></li>
+                            <li><a href="#home" class="nav__link">Home</a></li>
                             <li><a href="#" class="nav__link">Contact</a></li>
-                            <li><a href="#" class="nav__link nav__link--primary">Search Movies</a></li>
+                            <li><a href="#movies__main" class="nav__link nav__link--primary">Search Movies</a></li>
                         </ul>
                         <button id="open__menu"><i class="fa-solid fa-bars"></i></button>
                     <div id="menu" class="pop-up__menu">
                         <div class="pop-up__content">
                             <ul class="menu__links">
-                                <li><a href="#" class="menu__list">Home</a></li>
+                                <li><a href="#home" class="menu__list">Home</a></li>
                                 <li><a href="#" class="menu__list">Contact</a></li>
-                                <li><a href="#" class="menu__list">Search Movies</a></li>
+                                <li><a href="#movies__main" class="menu__list">Search Movies</a></li>
                             </ul>
                             <button id="menu__btn--close"><i class="fa-solid fa-xmark"></i></button>
                         </div>
@@ -41,7 +41,7 @@
             <div class="row">
                 <div class="search__bar--container">
                     <h1 class="movies__title">Search Movies:</h1>
-                    <input class="search__bar" type="text" placeholder="Search">
+                    <input class="search__input" type="text" placeholder="Search">
                     <button id="search__btn">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
