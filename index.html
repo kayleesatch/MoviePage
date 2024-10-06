@@ -3,85 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Movies</title>
     <link rel="stylesheet" href="index.css" />
     <script src="index.js"></script>
     <script src="https://kit.fontawesome.com/009510bb19.js" crossorigin="anonymous"></script>
   </head>
-  <body id="movies__body">
-    <section>
+
+  <body>
+    <section id="landing">
         <nav>
             <div class="row">
                 <div class="nav__container">
-                <div class="logo__banner--container">
-                    <figure class="logo__container">
-                        <img class="movie__logo" src="movieLogo.jpg" />
-                    </figure>
-                    <figure class="img__container">
-                        <img class="movie__banner" src="movie-banner.png" alt="" />
-                    </figure>
-                    </div>
-                        <ul class="nav__list">
-                            <li class="nav">Home</li>
-                            <li class="nav">Search Movies</li>
-                            <li class="nav"><button class="contact__btn">Contact</button></li>
+                        <img class="logo" src="movieLogo.jpg" alt="">
+                        <img class="banner" src="movie-banner.png" alt="" />
+                        <ul class="nav__links">
+                            <li><a href="#" class="nav__link">Home</a></li>
+                            <li><a href="#" class="nav__link">Contact</a></li>
+                            <li><a href="#" class="nav__link nav__link--primary">Search Movies</a></li>
                         </ul>
-                        <button class=" open__menu" onclick=" openMenu()">
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
-                    <div class="menu__backdrop" style="visibility: hidden;">
-                        <button class=" menu__btn--close" onclick="closeMenu()">
-                            <i class="fa-solid fa-xmark"></i>
-                        </button>
-                        <ul class="menu__links">
-                            <li class="menu__list">
-                                <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
-                            </li>
-                        <ul class="menu__links">
-                            <li class="menu__list">
-                                <a href="#movies" class="menu__link" onclick="closeMenu()">Search Movies</a>
-                            </li>
-                        <ul class="menu__links">
-                            <li class="menu__list">
-                                <a class="menu__link no-cursor" onclick="closeMenu()">Contact</a>
-                            </li>
-                        </ul>
-                    </nav>
-        </section>
-        <main id="movies__main">
-            <section>
-                <div class="container">
-                    <div class="row">
-                        <div class="movies__header">
-                            <h2 class="section__title movies__header--title">
-                                Search <span class="purple">Movies</span>
-                            </h2>
-                            <div class="search-bar__container">
-                                <h1>Browse our Movies</h1>
-                                <div>
-                                    <input class="search-bar" type="text" placeholder="Search Movies" onchange="onSearchChange(event)" />
-                                    <i class="fa-solid fa-magnifying-glass search-btn"></i>
-                                </div>
-                            </div>
+                        <button id="open__menu"><i class="fa-solid fa-bars"></i></button>
+                    <div id="menu" class="pop-up__menu">
+                        <div class="pop-up__content">
+                            <ul class="menu__links">
+                                <li><a href="#" class="menu__list">Home</a></li>
+                                <li><a href="#" class="menu__list">Contact</a></li>
+                                <li><a href="#" class="menu__list">Search Movies</a></li>
+                            </ul>
+                            <button id="menu__btn--close"><i class="fa-solid fa-xmark"></i></button>
                         </div>
                     </div>
-                    
-                </section>
-                
-            </main>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <section id="movies__main">
+        <div class="movies__container">
+            <div class="row">
+                <div class="search__bar--container">
+                    <h1 class="movies__title">Search Movies:</h1>
+                    <input class="search__bar" type="text" placeholder="Search">
+                    <button id="search__btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-    </div>
-    <section id="movie__results">
+    </section>
+    <section id="results">
         <div class="search__results">
             <div class="row">
                 <h2 class="search__results--title">Search Results:</h2>
             </div>
-            <div class="movies movies__loading">
+            <div class="movies__loading">
                 <i class="fas fa-spinner movies__loading--spinner"></i>
             </div>
-            <div class="Movies">
+            <div class="movie__results">
+                <div class="movie__card">
+                    <img src="movie__poster">Movie Poster
+                    <h3 class="movie__title">Movie Title</h3>
+                    <p class="movie__year">Movie Year</p>
                 </div>
+            </div>
         </div>
     </section>
-</body>
+  </body>
 </html>
