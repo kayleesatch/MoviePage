@@ -200,6 +200,10 @@ li {
   }
 }
 
+#results {
+  display: none;
+}
+
 .movie__results {
   display: flex;
   flex-wrap: wrap;
