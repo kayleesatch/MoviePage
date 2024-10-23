@@ -62,6 +62,12 @@
     
     searchButton.addEventListener("click", () => {
         const query = searchInput.value.trim()
+
+        movieEl.innerHTML = ""
+        document.querySelector(".movies__loading").style.display = "none"
+        document.getElementById("results").style.display = "none"
+        searchInput.value = ""
+        
         if (query) {
             fetchMovies(query)
         }
