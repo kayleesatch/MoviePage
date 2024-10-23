@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="search__bar--container">
                     <h1 class="movies__title">Search Movies:</h1>
-                    <input class="search__input" type="text" placeholder="Movies">
+                    <input class="search__input" type="text" placeholder="Movie Keywords">
                     <button id="search__btn">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
@@ -39,6 +39,13 @@
             </div>
             <div class="movies__loading" style="display: none;">
                 <i class="fas fa-spinner movies__loading--spinner"></i>
+            </div>
+            <div class="sort__menu">
+                <label for="sort__select">Sort by:</label>
+                <select id="sort__select">
+                    <option value="newest">Newest</option>
+                    <option value="oldest">Oldest</option>
+                </select>
             </div>
             <div class="movie__results">
                 <div class="movie__card">

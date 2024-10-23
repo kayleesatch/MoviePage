@@ -3,6 +3,9 @@
     const movieEl = document.querySelector(".movie__results")
     const searchInput = document.querySelector(".search__input")
     const searchButton = document.getElementById("search__btn")
+    const sortSelect = document.getElementById("sort__select")
+
+    let movies = []
     
     function indexHTML(movie) {
         return `
@@ -14,9 +17,7 @@
     }
     
     async function fetchMovies(query){
-
         document.querySelector(".movies__loading").style.display = "block"
-
         document.getElementById("results").style.display = "block"
 
         try{
@@ -30,7 +31,8 @@
             document.querySelector(".movies__loading").style.display = "none"
 
             if(movieData.Search) {
-                movieEl.innerHTML = movieData.Search.map((movieResults) => indexHTML(movieResults)).join("")
+                movies = movieData.Search
+                displayMovies(movies)
             } else {
                 movieEl.innerHTML = "<p> No Movies Found.</p>"
             }
@@ -40,6 +42,23 @@
             movieEl.innerHTML = "<p>Error fetching movies. Please try again later.</p>"
         }
     }
+
+    function displayMovies(moviesToDisplay) {
+        movieEl.innerHTML = moviesToDisplay.map((movie) => indexHTML(movie)).join("")
+    }
+
+    sortSelect.addEventListener("change", () => {
+        const sortOrder = sortSelect.value
+        let sortedMovies
+
+        if (sortOrder === "newest") {
+            sortedMovies = [...movies].sort((a, b) => parseInt(b.Year) - parseInt(a.Year))
+        } else if (sortOrder === "oldest") {
+            sortedMovies = [...movies].sort((a, b) => parseInt(a.Year) - parseInt(b.Year))
+        }
+
+        displayMovies(sortedMovies)
+    })
     
     searchButton.addEventListener("click", () => {
         const query = searchInput.value.trim()
