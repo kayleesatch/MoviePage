@@ -148,6 +148,11 @@ section {
   color: grey;
 }
 
+@media(max-width: 980px) {
+  .movie__card {
+    width: 50%;
+  }
+}
 /* SMALL PHONES, TABLETS, LARGE SMARTPHONES*/
 @media (max-width: 768px) {
   .logo {
